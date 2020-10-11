@@ -2,22 +2,16 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
-var totalPrice = document.getElementById('total-price');
 var quantity = document.getElementById('quantity');
-var unitPrice = document.getElementById('unit-price');
-var unitPrice;
-var currentQuantity;
+var unitPrice = document.getElementById('unit-price').textContent;
+var currentQuantity = document.getElementById('quantity').value;
 
 // Executes if #total-value element is on current page
-if (totalPrice != null && totalPrice.length > 0) {
-    quantity.addEventListener('change', (event) => {
-        currentQuantity = parseInt(quantity.value);
-        unitPrice = Number(unitPrice.textContent);
+quantity.addEventListener('change', (event) => {
+    var intUnitPrice = parseFloat(unitPrice);
+        
+    var price = (intUnitPrice * quantity.value).toFixed(2);
+    var myPrice = price.toString();
+    document.getElementById('total-price').innerHTML = myPrice;
+});
 
-        // For debugging
-        // console.log('currentQuantity: ' + currentQuantity);
-        // console.log('price: ' + unitPrice);
-        totalPrice = unitPrice * currentQuantity
-        totalPrice.textContent(totalPrice.toFixed(2));
-    });
-} 

@@ -140,6 +140,11 @@ p.food-item-info {
     width: 200px;
 }
 
+ul li {
+    display: inline-block;
+    list-style: none
+}
+
 .fa-chevron-left, .fa-info-circle {
     width: 1.5rem;
 }
