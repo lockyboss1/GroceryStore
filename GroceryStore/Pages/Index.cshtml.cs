@@ -17,18 +17,12 @@ namespace GroceryStore.Pages
         [BindProperty]
         public string Feedback { get; set; }
 
-        [BindProperty]
-        public string Name { get; set; }
-
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
-        }
-
-        public List<GroceryItem> Foods = Inventory.ToList();
-       
+        }   
 
         public void OnGet()
         {

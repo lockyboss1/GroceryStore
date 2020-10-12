@@ -5,36 +5,28 @@
 }
 
 <div class="text-center">
-    <h1 id="store-name"><img id="cart" class="mr-2" src="~/images/cart.png">Grocer.ly</h1>
-    <p>Browse our inventory online and shop in-store!</p>
+    <h1 id="store-name"><img class="big-cart" src="~/images/cart.png">Grocer.ly</h1>
+    <p>Browse our inventory online and shop in-store! or check out some of our favourite recipes.</p>
 </div>
 
 <hr />
 
-<h2 class="text-center">Fruits</h2>
+<section id="mysection" class="text-center">
+    <ul>
+        <li class="">
+            <a asp-page="/Groceries">Groceries</a>
+            <img id="home-list-icon" src=images/groceries.png>
+        </li>
 
-<hr />
+        <li class="">
+            <a asp-page="/Recipes">Recipes</a>
+            <img id="home-list-icon1" src=images/recipes.png>
+        </li>
 
-
-
-<div id="food-container">
-    <!-- Loop through Model.Foods -->
-    @foreach (var food in Model.Foods)
-    {
-        <div class="container">
-            <div class="col-3 pl-1 pr-1 text-center" id="image-col">
-                <img class="food-item-image" src=@food.ImageSrc alt=@food.Name>
-            </div>
-
-            <div class="col-6 pl-1 pr-1" id="info-col">
-                <p class="food-item-info">@food.Name.Replace("-", " ")</p>
-                <p id="food-price"class="food-item-info">$@String.Format("{0:0.00} / lb", food.Price)</p>
-            </div>
-
-            <div class="col-3 pl-1 pr-1 text-center" id="button-col">
-                <a asp-page="/Details" asp-route-name=@System.Web.HttpUtility.UrlPathEncode(food.Name) class="btn text"><i class="fas fa-info-circle"></i></a>
-            </div>
-        </div>
-    }
-</div>
+        <li class="">
+            <a asp-page="/Contact">Contact Us</a>
+            <img id="home-list-icon1" src=images/feedback.png>
+        </li>
+    </ul>
+</section>
 

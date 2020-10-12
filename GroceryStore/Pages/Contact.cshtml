@@ -1,0 +1,57 @@
+﻿@page
+@model GroceryStore.Pages.ContactModel
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<h1 class="contact-header">Contact Us</h1>
+<form method="post">
+    <div class="contact-container">
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <div class="left-container">
+            <p>GROCER.ly</p>
+            <div class="form-image">
+                <img class="contact-image" src="~/images/cart.png" />
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="row1">
+                <p class="col-25">First Name:</p>
+                <div class="col-75">
+                    <input asp-for="Customer.FirstName" />
+                    <span asp-validation-for="Customer.FirstName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="col-25">Last Name:</p>
+                <div class="col-75">
+                    <input asp-for="Customer.LastName" />
+                    <span asp-validation-for="Customer.LastName"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="col-25">E-Mail:</p>
+                <div class="col-75">
+                    <input asp-for="Customer.Email" />
+                    <span asp-validation-for="Customer.Email"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <p class="col-25">Message:</p>
+                <div class="col-75">
+                    <textarea asp-for="Customer.Text"></textarea>
+                    <span asp-validation-for="Customer.Text"></span>
+                </div>
+            </div>
+
+
+            <input id="submit" type="submit" />
+        </div>
+    </div> 
+</form>

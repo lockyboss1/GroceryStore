@@ -5,7 +5,7 @@ namespace GroceryStore.Models
 {
     public static class Inventory
     {
-        public static List<GroceryItem> ToList()
+        public static List<GroceryItem> Fruits()
         {
             return new List<GroceryItem>
       {
