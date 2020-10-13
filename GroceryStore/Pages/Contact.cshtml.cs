@@ -14,24 +14,27 @@ namespace GroceryStore.Pages
         [BindProperty]
         public Customer Customer { get; set; }
 
-        public IActionResult OnGet()
-        {
-            return Page();
-        } 
+        public void OnGet()
+        {    
+        }
 
-        public async Task<IActionResult> OnPostAsync(string Name)
+        public async Task<IActionResult> OnPostAsync()
         {
+            using (StreamWriter writer = new StreamWriter("Contact.txt", append: true))
+            {
+                await writer.WriteLineAsync($"{DateTime.Now} {Customer.FirstName}, {Customer.LastName}, {Customer.Email}, {Customer.Text}");
+            }
+
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            using (StreamWriter writer = new StreamWriter("Contact.txt", append: true))
+            else
             {
-                await writer.WriteLineAsync($"{DateTime.Now} {Name}");
+                TempData["Message"] = "Message Sent";
+                return RedirectToAction("Contact", "Home");
             }
-
-            return RedirectToPage("./Index");
         }
     }
 }

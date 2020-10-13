@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Home";
 }
 
 <div class="text-center">
@@ -13,18 +13,18 @@
 
 <section id="mysection" class="text-center">
     <ul>
-        <li class="">
-            <a asp-page="/Groceries">Groceries</a>
+        <li>
+            <a class="home-list-text" asp-page="/Groceries">Groceries</a>
             <img id="home-list-icon" src=images/groceries.png>
         </li>
 
-        <li class="">
-            <a asp-page="/Recipes">Recipes</a>
+        <li>
+            <a class="home-list-text" asp-page="/Recipes">Recipes</a>
             <img id="home-list-icon1" src=images/recipes.png>
         </li>
 
-        <li class="">
-            <a asp-page="/Contact">Contact Us</a>
+        <li>
+            <a class="home-list-text" asp-page="/Contact">Contact Us</a>
             <img id="home-list-icon1" src=images/feedback.png>
         </li>
     </ul>

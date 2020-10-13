@@ -12,13 +12,22 @@
 
         <div class="left-container">
             <p>GROCER.ly</p>
+
+            @if (TempData["Message"] != null)
+            {
+                <div class="message-sent">
+                    @TempData["Message"]
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            }
+
             <div class="form-image">
                 <img class="contact-image" src="~/images/cart.png" />
             </div>
         </div>
 
         <div class="right-container">
-            <div class="row1">
+            <div class="row">
                 <p class="col-25">First Name:</p>
                 <div class="col-75">
                     <input asp-for="Customer.FirstName" />
@@ -53,5 +62,5 @@
 
             <input id="submit" type="submit" />
         </div>
-    </div> 
+    </div>
 </form>
