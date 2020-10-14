@@ -22,7 +22,8 @@ namespace GroceryStore.Pages
         {
             using (StreamWriter writer = new StreamWriter("Contact.txt", append: true))
             {
-                await writer.WriteLineAsync($"{DateTime.Now} {Customer.FirstName}, {Customer.LastName}, {Customer.Email}, {Customer.Text}");
+                await writer.WriteLineAsync($"{DateTime.Now} {Customer.Name}, {Customer.Number}, {Customer.Email}, {Customer.Topic}," +
+                    $"{Customer.Text}");
             }
 
             if (!ModelState.IsValid)

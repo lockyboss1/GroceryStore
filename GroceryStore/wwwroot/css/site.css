@@ -195,6 +195,18 @@ ul li {
     color: red;
 }
 
+form {
+    overflow: hidden;
+}
+
+label {
+    padding-left: 70px;
+}
+
+label.name, label.number, label.email, label.topic {
+    padding-top: 15px;
+}
+
 .contact-container {
     display: flex;
     max-width: 800px;
@@ -203,7 +215,6 @@ ul li {
 }
 
 .left-container {
-    grid-template-areas: "left right";
     overflow: hidden;
     padding: 40px 0 0 0;
     position: relative;
@@ -219,21 +230,9 @@ ul li {
 }
 
 .right-container {
-    width: 500px;
-    height: 560px;
-    padding: 1em;
-    box-sizing: border-box;
     background: #bfdbf7;
-    display: grid;
-    grid-gap: 50px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 1em 1em 1em 1em;
-    margin-right: 20px;
-}
-
-.col-25 {
-    padding-left: 30px;
-    padding-right: 20px;
+    width: 500px;
+    height: 600px;
 }
 
 .contact-image {
@@ -253,42 +252,45 @@ textarea:focus, input:focus {
     outline: none;
 }
 
-input[type=text], [type=email] {
+input {
     display: flex;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+    width: 70%;
     box-sizing: border-box;
     outline: none;
     border: none;
     border-bottom: 2px solid #829cbc;
     background-color: transparent;
-    margin-top: -21px;
+    margin-left: 70px;
+    margin-top: -10px;
 }
 
 textarea {
-    width: 100%;
+    width: 70%;
     height: 150px;
-    padding: 12px 20px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: #f8f8f8;
     resize: none;
+    margin-left: 70px;
+}
+
+.customer-message {
+    padding-top: 30px;
 }
 
 #submit {
+    text-align: center;
     width: 100px;
-    height: 100px;
+    height: 50px;
     padding: 5px;
-    font: bold .6em sans-serif;
+    font: bold .7em sans-serif;
     border: 2px solid #333;
     border-radius: 5px;
     background: none;
     cursor: pointer;
-    transform: rotate(-1.5deg);
-    margin-top: 160px;
     margin-left: 33%;
+    margin-top: 35px;
 }
 
 .message-sent {

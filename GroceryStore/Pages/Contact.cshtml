@@ -18,7 +18,7 @@
                 <div class="message-sent">
                     @TempData["Message"]
                     <i class="fas fa-check-circle"></i>
-                </div>
+                </div>     
             }
 
             <div class="form-image">
@@ -27,39 +27,27 @@
         </div>
 
         <div class="right-container">
-            <div class="row">
-                <p class="col-25">First Name:</p>
-                <div class="col-75">
-                    <input asp-for="Customer.FirstName" />
-                    <span asp-validation-for="Customer.FirstName"></span>
-                </div>
+            <label for="name" class="name">Name: </label>
+            <span asp-validation-for="Customer.Name"></span>
+            <input asp-for="Customer.Name" />
+
+            <label for="number" class="number">Phone Number: </label>
+            <input type="tel" asp-for="Customer.Number" />
+
+            <label for="email" class="email">E-Mail: </label>
+            <span asp-validation-for="Customer.Email"></span>
+            <input asp-for="Customer.Email" />
+
+            <label for="topic" class="topic">Topic: </label>
+            <span asp-validation-for="Customer.Topic"></span>
+            <input asp-for="Customer.Topic" />
+
+            <div class="customer-message">
+                <label for="message" class="Message">Message: </label>
+                <span asp-validation-for="Customer.Text"></span>
+                <br />
+                <textarea asp-for="Customer.Text"></textarea>
             </div>
-
-            <div class="row">
-                <p class="col-25">Last Name:</p>
-                <div class="col-75">
-                    <input asp-for="Customer.LastName" />
-                    <span asp-validation-for="Customer.LastName"></span>
-                </div>
-            </div>
-
-            <div class="row">
-                <p class="col-25">E-Mail:</p>
-                <div class="col-75">
-                    <input asp-for="Customer.Email" />
-                    <span asp-validation-for="Customer.Email"></span>
-                </div>
-            </div>
-
-            <div class="row">
-                <p class="col-25">Message:</p>
-                <div class="col-75">
-                    <textarea asp-for="Customer.Text"></textarea>
-                    <span asp-validation-for="Customer.Text"></span>
-                </div>
-            </div>
-
-
             <input id="submit" type="submit" />
         </div>
     </div>
