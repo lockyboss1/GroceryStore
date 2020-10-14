@@ -15,3 +15,4 @@ quantity.addEventListener('change', (event) => {
     document.getElementById('total-price').innerHTML = myPrice;
 });
 
+/////////////////////////////////////////////////////////////////

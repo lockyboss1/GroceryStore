@@ -11,6 +11,7 @@ namespace GroceryStore.Pages
     public class FruitsPageModel : PageModel
     {
         public List<GroceryItem> Foods = Inventory.Fruits();
+        public List<GroceryItem> Vegetable1 = MyVegetables.Vegetables();
 
         public void OnGet()
         {

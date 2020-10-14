@@ -9,9 +9,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace GroceryStore.Pages
 {
-    public class DetailsModel : PageModel
+    public class Details_VegetablesModel : PageModel
     {
-        public List<GroceryItem> Fruit = Inventory.Fruits();
+        public List<GroceryItem> Vegetable = MyVegetables.Vegetables();
         public GroceryItem CurrentFood = new GroceryItem();
 
 
@@ -27,7 +27,7 @@ namespace GroceryStore.Pages
                 return NotFound();
             }
 
-            CurrentFood = Fruit.Find(x => x.Name == name);
+            CurrentFood = Vegetable.Find(x => x.Name == name);
 
             return Page();
         }
