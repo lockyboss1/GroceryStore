@@ -1,7 +1,6 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿
 
-// Write your Javascript code.
+/* Function that changes the total cost when the quantity of items is changed*/
 var quantity = document.getElementById('quantity');
 var unitPrice = document.getElementById('unit-price').textContent;
 var currentQuantity = document.getElementById('quantity').value;

@@ -252,7 +252,7 @@ textarea:focus, input:focus {
     outline: none;
 }
 
-input {
+#Customer_Name, #Customer_Number, #Customer_Email, #Customer_Topic {
     display: flex;
     width: 70%;
     box-sizing: border-box;
